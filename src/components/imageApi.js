@@ -1,7 +1,7 @@
 import axios from "axios";
 import PropTypes from 'prop-types';
 
-const BASE_URL = "https://pixabay.com/api";
+const BASE_URL = "https://pixabay.com/api/";
 const API_KEY = '19685928-f191ac91b9da632ea9a4b744f';
 
 axios.defaults.baseURL = BASE_URL;
