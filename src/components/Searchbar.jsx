@@ -23,11 +23,19 @@ class Searchbar extends Component {
         return (
             <header className="Searchbar">
                 <form className="SearchForm">
-                    <button type="submit" className="SearchForm-button" onClick={this.heandleSendValue}>
+                    <button
+                        type="submit"
+                        className="SearchForm-button"
+                        onClick={this.heandleSendValue}>
                         <span className="SearchForm-button-label">Search</span>
                     </button>
-                    <input value={this.state.queryValue} className="SearchForm-input" type="text"
-                        autoComplete="off" autoFocus placeholder="Search images and photos" onChange={this.handleSearchQuery} />
+                    <input
+                        value={this.state.queryValue}
+                        className="SearchForm-input"
+                        type="text"
+                        autoComplete="off"
+                        autoFocus placeholder="Search images and photos"
+                        onChange={this.handleSearchQuery} />
                 </form>
             </header>
         )

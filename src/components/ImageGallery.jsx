@@ -2,10 +2,17 @@ import PropTypes from "prop-types";
 
 import ImageGalleryItem from "./ImageGalleryItem";
 
-const ImageGallery = ({ images, onImageClick }) => {
+const ImageGallery = ({ images, onImageClick, handleClickBtn }) => {
     return (
         <ul className="ImageGallery">
-            <ImageGalleryItem images={images} onImageClick={onImageClick} />
+            {images.map((image) => (
+                <ImageGalleryItem
+                    key={image.id}
+                    image={image}
+                    onImageClick={onImageClick}
+                    handleClickBtn={handleClickBtn}
+                />))
+            }
         </ul>
     )
 }
