@@ -19,13 +19,16 @@ const ImageGalleryItem = ({ image, onImageClick, handleClickBtn }) => {
     
     }
 
-    const toggleBtn = () => {
-                    setHover(!hover)
-        
+    const showBtn = () => {
+        setHover(true)
+    }
+
+    const notShowBtn = () => {
+        setHover(false)
     }
 
     return (
-        <li className="ImageGalleryItem" key={id} id={id} onMouseOver={toggleBtn} onMouseLeave={toggleBtn}>
+        <li className="ImageGalleryItem" key={id} id={id} onMouseOver={showBtn} onMouseLeave={notShowBtn}>
             <div className="img_gallery_overlay">
                 <img src={webformatURL}
                 srcSet={largeImageURL}

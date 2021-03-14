@@ -94,7 +94,7 @@ class App extends Component {
 
   render() {
     const { images, imageUrl, modalStatus, loaderStatus, error } = this.state;
-    const renderBtn = images.length >= 12 && !loaderStatus;
+    const renderBtn = images.length !== 0 && !loaderStatus;
 
     return (
       <div className="Container">
